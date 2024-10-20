@@ -4,7 +4,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 .container {
     width: 80%;
     margin: 0 auto;
@@ -13,12 +12,10 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 form {
     display: flex;
     flex-direction: column;
 }
-
 label, input, select, button {
     margin-bottom: 10px;
 }
