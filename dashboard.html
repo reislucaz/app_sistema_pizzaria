@@ -13,21 +13,17 @@
     </head>
     <body>
         <h1>Dashboard</h1>
-
         <div class="container">
             <h2 id="welcomeMessage"></h2>
             <button id="logoutBtn" class="btn btn-success">Deslogar</button>
             <button id="listarBtn" class="btn btn-primary">Listar Usuários</button>
         </div>
-
         <script src="js/dashboard.js"></script>
     </body>
-
     <script>
         document.getElementById('logoutBtn').addEventListener('click', function() {
             // Pega o token armazenado no localStorage
             const token = localStorage.getItem('token');
-
             // Faz a requisição para a rota de logout no backend
             fetch('http://localhost:8000/api/logout', {
                 method: 'POST',
@@ -40,7 +36,6 @@
                 if (response.ok) {
                     // Se o logout foi bem-sucedido, limpa o localStorage
                     localStorage.clear();
-
                     // Redireciona o usuário para a página de login
                     window.location.href = 'login.html';
                 } else {

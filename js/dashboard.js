@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const welcomeMessage = document.getElementById('welcomeMessage');
-
     // Obter o token do localStorage
     const token = localStorage.getItem('token');
-
     if (token) {
         // Fazer uma requisição para a API protegida para obter os dados do usuário
         fetch('http://localhost:8000/api/user', {

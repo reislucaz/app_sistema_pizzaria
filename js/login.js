@@ -1,15 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('loginForm');
     const mensagem = document.getElementById('mensagem');
-
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-
         const loginData = {
             email: document.getElementById('email').value,
             password: document.getElementById('password').value
         };
-
         // Enviar os dados de login via API
         fetch('http://localhost:8000/api/login', {
             method: 'POST',
